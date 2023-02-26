@@ -18,7 +18,11 @@ textarea {
 }
 
 body {
-  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  
   font-family: $userfont;
 	font-size: $fontsize;
 	line-height: $lineheight;
@@ -48,6 +52,12 @@ a {
   color: inherit;
 }
 
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -63,7 +73,6 @@ a {
 
 .container {
   max-width: $desktopW;
-  min-width: $mobileW;
   width: 100%;
   padding: 0 25px;
 
