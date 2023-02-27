@@ -901,6 +901,139 @@ button {
   .container {
     padding: 0 58px;
   }
+
+  .header {
+    padding: 0;
+    padding-top: 49px;
+  }
+
+  .header__logo {
+    margin-right: 40px;
+  }
+
+  .header__top {
+    display: none;
+  }
+
+  .header__body {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 0;
+  }
+
+  .header__body .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 200px;
+            flex: 0 0 200px;
+  }
+
+  .logo__img {
+    width: 200px;
+    height: 52px;
+  }
+
+  .nav-header {
+    position: relative;
+    padding-top: 0;
+    padding-left: 105px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .nav-header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+
+  .nav-header__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .nav-header__item:not(:last-child) {
+    margin-right: 34px;
+  }
+
+  .nav-header__link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .login {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin: 0;
+  }
+
+  .login--body {
+    font-weight: 700;
+  }
+
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100px;
+            flex: 0 0 100px;
+    padding-left: 0;
+  }
+
+  .contacts__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50px;
+            flex: 0 0 50px;
+    height: 50px;
+  }
+
+  .contacts__icon {
+    margin-right: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50px;
+            flex: 0 0 50px;
+    height: 50px;
+  }
+
+  .contacts__text {
+    font-size: 0;
+  }
+
+  .contacts__item--mail .contacts__icon {
+    background-color: #FFBD30;
+    background-size: 16px 14px;
+    background-image: url("../img/icons/icons.svg#icon_mail-black");
+  }
+
+  .contacts__item--phone .contacts__icon {
+    background-color: #FF8D30;
+    background-size: 18px 18px;
+    background-image: url("../img/icons/icons.svg#icon_call");
+  }
+
+  .social {
+    display: none;
+  }
 }
 
 @media (max-width: 1439px) {

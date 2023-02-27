@@ -1,6 +1,17 @@
+.logo {
+  @media (min-width: $desktopW) {
+    flex: 0 0 200px;
+  }
+}
+
 .logo__img{
   @media (min-width: $tableW) {
     width: 166px;
     height: 42px;
+  }
+
+  @media (min-width: $desktopW) {
+    width: 200px;
+    height: 52px;
   }
 }

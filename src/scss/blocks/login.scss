@@ -22,6 +22,11 @@
     line-height: 1;
   }
 
+  @media (min-width: $desktopW) {
+    order: 1;
+    margin: 0;
+  }
+
   &:hover,
   &:focus {
     background-color: darken($basic_yellow, 20%);
@@ -43,5 +48,9 @@
 .login--body {
   @media (min-width: $tableW) {
     font-weight: 400;
+  }
+
+  @media (min-width: $desktopW) {
+    font-weight: 700;
   }
 }

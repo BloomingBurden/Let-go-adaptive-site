@@ -10,6 +10,11 @@
   @media (min-width: $tableW) {
     padding: 40px 0;
   }
+
+  @media (min-width: $desktopW) {
+    padding: 0;
+    padding-top: 49px;
+  }
 }
 
 .header[data-burger='opened'] {
@@ -33,6 +38,18 @@
       transform: rotate(-45deg);
     }
   }  
+}
+
+.header__logo {
+  @media (min-width: $desktopW) {
+    margin-right: 40px;
+  }
+}
+
+.header__top {
+  @media (min-width: $desktopW) {
+    display: none;
+  }
 }
 
 .header__top .header__container {
@@ -63,6 +80,20 @@
 
   @media (min-width: $tableW) {
     padding: 40px 0 90px;
+  }
+
+  @media (min-width: $desktopW) {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 0;
+  }
+}
+
+
+.header__body .container {
+  @media (min-width: $desktopW) {
+    display: flex;
+    align-items: center;
   }
 }
 

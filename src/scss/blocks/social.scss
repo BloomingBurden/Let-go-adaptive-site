@@ -5,6 +5,10 @@
   @media (min-width: $tableW) {
     padding-left: 83px;
   }
+
+  @media (min-width: $desktopW) {
+    display: none;
+  }
 }
 .social__item {
   &:not(:last-child) {

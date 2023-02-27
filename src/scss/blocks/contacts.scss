@@ -4,11 +4,23 @@
   @media (min-width: $tableW) {
     padding-left: 55px;
   }
+
+  @media (min-width: $desktopW) {
+    display: flex;
+    width: 100px;
+    flex: 0 0 100px;
+    padding-left: 0;
+  }
 }
 .contacts__item {
   display: flex;
   align-items: center;
   transition: 0.3s ease;
+
+  @media (min-width: $desktopW) {
+    flex: 0 0 50px;
+    height: 50px;
+  }
 
   &:hover,
   &:focus {
@@ -36,6 +48,12 @@
     height: 68px;
     margin-right: 23px;
   }
+
+  @media (min-width: $desktopW) {
+    margin-right: 0;
+    flex: 0 0 50px;
+    height: 50px;
+  }
 }
 .contacts__text {
   line-height: calc(18/16);
@@ -46,6 +64,10 @@
     font-size: 28px;
     line-height: 1;
   }
+
+  @media (min-width: $desktopW) {
+    font-size: 0;
+  }
 }
 
 .contacts__item--mail .contacts__icon {
@@ -55,7 +77,14 @@
   @media (min-width: $tableW) {
     background-size: 36px 38px;
   }
+
+  @media (min-width: $desktopW) {
+    background-color: $special_yellow_dark;
+    background-size: 16px 14px;
+    background-image: url('@img/icons/icons.svg#icon_mail-black');
+  }  
 }
+
 .contacts__item--phone .contacts__icon {
   background-size: 18px 17px;
   background-image: url('@img/icons/icons.svg#icon_telephone');
@@ -63,4 +92,10 @@
   @media (min-width: $tableW) {
     background-size: 27px 26px;
   }
+
+  @media (min-width: $desktopW) {
+    background-color: $special_orange;
+    background-size: 18px 18px;
+    background-image: url('@img/icons/icons.svg#icon_call');
+  }  
 }
