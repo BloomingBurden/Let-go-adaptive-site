@@ -1,0 +1,42 @@
+.social {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tableW) {
+    padding-left: 83px;
+  }
+}
+.social__item {
+  &:not(:last-child) {
+    margin-right: 26px;
+
+    @media (min-width: $tableW) {
+      margin-right: 37px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tableW) {
+  .social__item--fb svg{
+    width: 14px;
+    height: 28px;
+  }
+  
+  .social__item--vk svg{
+    width: 30px;
+    height: 16px;
+  }
+  .social__item--inst svg{
+    width: 24px;
+    height: 24px;
+  }
+}

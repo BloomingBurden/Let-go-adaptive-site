@@ -1,0 +1,137 @@
+.header {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $accent;
+  padding: 19px 0;
+
+  @media (min-width: $tableW) {
+    padding: 40px 0;
+  }
+}
+
+.header[data-burger='opened'] {
+  .header__body {
+    opacity: 1;
+    visibility: visible;
+    user-select: auto;
+    transform: translate(0, 0);
+  }
+
+  .header__burger {
+    &::before,
+    &::after {
+      background-color: #cccccc;
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+    &::before {
+      top: 8px;
+      transform: rotate(-45deg);
+    }
+  }  
+}
+
+.header__top .header__container {
+  @media (min-width: $tableW) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__container {
+  position: relative;
+}
+
+.header__login.login {
+  @media (min-width: $tableW) {
+    margin-bottom: 0;
+  }
+}
+
+.header__body {
+  height: 100vh;
+  overflow-y: auto;
+  padding: 27px 0 41px;
+  transition: 1s ease;
+
+  background-color: #ffffff;
+  color: $dark-blue;
+
+  @media (min-width: $tableW) {
+    padding: 40px 0 90px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .header__body {
+    z-index: 4;
+    opacity: 0;
+    visibility: hidden;
+    user-select: none;
+    transform: translate(0, -100px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .header__body .header__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "a a"
+      "b b"
+      "c c"
+      "d d"
+      "f f";
+  
+    @media (min-width: $tableW) {
+      grid-template-areas: 
+        'a c'
+        'b b'
+        'd d'
+        'f f';
+    }
+  }
+  
+  .header__logo-body {
+    justify-self: start;
+    grid-area: a;
+  }
+  .header__nav {
+    grid-area: b;
+    margin-bottom: 50px;
+  
+    @media (min-width: $tableW) {
+      margin-bottom: 134px;
+    }
+  }
+  
+  .header__login {
+    grid-area: c;
+    margin-bottom: 50px;
+  }
+  
+  .header__contacts {
+    grid-area: d;
+    justify-self: start;
+    margin-bottom: 40px;
+
+    @media (min-width: $tableW) {
+      margin-bottom: 128px;
+    }
+  }
+  
+  .header__social {
+    grid-area: f;
+    justify-self: center;
+
+    @media (min-width: $tableW) {
+      justify-self: start;
+    }
+  }
+}

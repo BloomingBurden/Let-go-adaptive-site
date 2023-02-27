@@ -1,0 +1,32 @@
+.nav-header {
+  padding-top: 65px;
+  text-align: center;
+
+  @media (min-width: $tableW) {
+    text-align: left;
+    padding-top: 90px;
+    padding-left: 55px;
+  }
+}
+
+.nav-header__link {
+  font-size: 30px;
+  line-height: calc(35/30);
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.3s ease;
+
+  @media (min-width: $tableW) {
+    font-size: 60px;
+    line-height: calc(71/60);
+  }
+
+  &:hover,
+  &:focus {
+    color: $basic_yellow;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

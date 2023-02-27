@@ -1,0 +1,47 @@
+.login {
+  width: 100%;
+  min-height: 50px;
+  background-color: $basic_yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: calc(30/17);
+  font-weight: 700;
+  color: $accent;
+  border-radius: 25px;
+  transition: 0.3s ease;
+
+  @media (min-width: $tableW) {
+    width: 188px;
+    height: 50px;
+    margin-left: auto;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($basic_yellow, 20%);
+  }
+
+  &:active {
+    color: rgba($accent, 0.4);
+  }
+}
+
+.login--top {
+  display: none;
+
+  @media (min-width: $tableW) {
+    display: flex;
+  }
+}
+
+.login--body {
+  @media (min-width: $tableW) {
+    font-weight: 400;
+  }
+}
