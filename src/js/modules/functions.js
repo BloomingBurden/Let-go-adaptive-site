@@ -1,4 +1,4 @@
-export function isWebp() {
+function isWebp() {
     function testWebP(callback) {
         let webP = new Image();
         webP.onload = webP.onerror = function () {
@@ -12,3 +12,21 @@ export function isWebp() {
         document.documentElement.classList.add(className);
     });
 }
+
+const onClickBurger = () => {
+
+    const toggleMenuBurger = (evt) => {
+        const target = evt.target;
+
+        if (!target.closest('.burger')) return;
+
+        const burgerMenu = document.querySelector('[data-burger]');
+
+        burgerMenu.dataset.burger === 'opened' ? burgerMenu.dataset.burger = 'closed' : burgerMenu.dataset.burger = 'opened';
+    }
+
+    document.addEventListener('click', toggleMenuBurger);
+};
+
+isWebp();
+onClickBurger();
