@@ -8,11 +8,11 @@
   padding: 19px 0;
 
   @media (min-width: $tableW) {
-    padding: 40px 0;
+    padding: 0;
+    padding-top: 40px;
   }
 
   @media (min-width: $desktopW) {
-    padding: 0;
     padding-top: 49px;
   }
 }

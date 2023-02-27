@@ -507,6 +507,7 @@ body {
   position: relative;
   overflow-x: hidden;
   word-wrap: break-word;
+  background-color: #161C35;
 }
 
 img {
@@ -558,6 +559,10 @@ button {
   font-size: 24px;
   line-height: 1;
   font-weight: 700;
+}
+
+main {
+  padding-top: 90px;
 }
 
 .header {
@@ -738,6 +743,9 @@ button {
   background-color: #192144;
   border-radius: 50%;
   margin-right: 16px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -780,13 +788,186 @@ button {
   opacity: 0.3;
 }
 
+.preview {
+  position: relative;
+}
+
+.no-webp .preview::before {
+  background-image: url("../img/travel/traveller-illustration-mobile.png"), url("../img/travel/globe-back-mobile.jpg"); }
+
+.preview::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 63% bottom, bottom;
+  background-size: 192px 255px, cover;
+  height: 385px;
+}
+
+.preview__title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 245px;
+  font-size: 36px;
+  line-height: 1.1111111111;
+  font-weight: 700;
+}
+
+.preview__top-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 28px;
+}
+
+.preview__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.preview .contacts__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40px;
+          flex: 0 0 40px;
+  height: 40px;
+}
+
+.preview .contacts__text {
+  font-size: 0;
+}
+
+.preview .contacts__icon {
+  margin-right: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40px;
+          flex: 0 0 40px;
+  height: 40px;
+  width: 40px;
+}
+
+.preview .contacts__item--mail .contacts__icon {
+  background-color: #FFBD30;
+  background-size: 16px 14px;
+  background-image: url("../img/icons/icons.svg#icon_mail-black");
+}
+
+.preview .contacts__item--mail .contacts__icon:hover,
+.preview .contacts__item--mail .contacts__icon:focus {
+  background-color: #c98900;
+}
+
+.preview .contacts__item--mail .contacts__icon:active {
+  opacity: 0.3;
+}
+
+.preview .contacts__item--phone .contacts__icon {
+  background-color: #FF8D30;
+  background-size: 18px 18px;
+  background-image: url("../img/icons/icons.svg#icon_call");
+}
+
+.preview .contacts__item--phone .contacts__icon:hover,
+.preview .contacts__item--phone .contacts__icon:focus {
+  background-color: #c95a00;
+}
+
+.preview .contacts__item--phone .contacts__icon:active {
+  opacity: 0.3;
+}
+
+.preview__login {
+  min-height: 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 190px;
+          flex: 1 0 190px;
+  width: 190px;
+  line-height: 1.1764705882;
+}
+
+.preview__quote {
+  padding-left: 25px;
+  margin: 0;
+  width: 186px;
+  margin-bottom: 29px;
+}
+
+.quote__item {
+  margin: 0;
+}
+
+.quote__item:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+b.quote__item {
+  font-weight: 700;
+}
+
+.preview__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.preview__item {
+  font-size: 18px;
+  line-height: 1;
+  color: #161C35;
+  padding: 22px 24px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.preview__item:nth-child(1) {
+  background-color: #FF8D30;
+}
+
+.preview__item:nth-child(2) {
+  background-color: #FFA530;
+}
+
+.preview__item:nth-child(3) {
+  background-color: #FFBD30;
+}
+
+.preview__item:nth-child(4) {
+  background-color: #FFD74B;
+}
+
+.preview__item span:first-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 140px;
+          flex: 0 0 140px;
+}
+
+.preview__item span:last-child {
+  color: #ffffff;
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0 40px;
   }
 
   .header {
-    padding: 40px 0;
+    padding: 0;
+    padding-top: 40px;
   }
 
   .header__top .header__container {
@@ -903,7 +1084,6 @@ button {
   }
 
   .header {
-    padding: 0;
     padding-top: 49px;
   }
 
@@ -1025,10 +1205,28 @@ button {
     background-image: url("../img/icons/icons.svg#icon_mail-black");
   }
 
+  .contacts__item--mail .contacts__icon:hover,
+  .contacts__item--mail .contacts__icon:focus {
+    background-color: #c98900;
+  }
+
+  .contacts__item--mail .contacts__icon:active {
+    opacity: 0.3;
+  }
+
   .contacts__item--phone .contacts__icon {
     background-color: #FF8D30;
     background-size: 18px 18px;
     background-image: url("../img/icons/icons.svg#icon_call");
+  }
+
+  .contacts__item--phone .contacts__icon:hover,
+  .contacts__item--phone .contacts__icon:focus {
+    background-color: #c95a00;
+  }
+
+  .contacts__item--phone .contacts__icon:active {
+    opacity: 0.3;
   }
 
   .social {
@@ -1167,4 +1365,16 @@ button {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
   }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .no-webp .preview::before {
+    background-image: url("../img/travel/traveller-illustration-mobile@2x.png"), url("../img/travel/globe-back-mobile.jpg"); }
+}
+
+.webp .preview::before { background-image: url(../img/travel/traveller-illustration-mobile.webp), url(../img/travel/globe-back-mobile.webp); }
+
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+
+  .webp .preview::before { background-image: url(../img/travel/traveller-illustration-mobile@2x.webp), url(../img/travel/globe-back-mobile.webp); }
 }
