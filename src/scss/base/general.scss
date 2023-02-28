@@ -33,6 +33,14 @@ body {
 	overflow-x: hidden;
   word-wrap: break-word;
   background-color: $accent;
+
+  @media (min-width: $tableW) {
+    background-color: #182044;
+  }
+
+  @media (min-width: $desktopW) {
+    background-color: $accent;
+  }  
 }
 
 img {
@@ -74,7 +82,7 @@ button {
 
 .container {
   max-width: $desktopW;
-  width: 100%;
+  margin: 0 auto;
   padding: 0 25px;
 
   @media (min-width: $tableW) {
@@ -93,6 +101,10 @@ button {
   font-weight: 700;
 }
 
-main {
+.page-body main {
   padding-top: 90px;
+
+  @media (min-width: $tableW) {
+    padding-top: 155px;
+  }
 }

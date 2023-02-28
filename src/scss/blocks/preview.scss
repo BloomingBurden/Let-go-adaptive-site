@@ -1,5 +1,10 @@
 .preview {
   position: relative;
+  overflow: hidden;
+
+  @media (min-width: $desktopW) {
+    padding-bottom: 123px;
+  }
 
   &::before {
     content: "";
@@ -14,10 +19,38 @@
     background-size: 192px 255px, cover;
     height: 385px;
 
-    @media (min-resolution: 2dppx) {
+    @media (min-resolution: 2dppx) and (min-width: $mobileW) {
       background-image: url("@img/travel/traveller-illustration-mobile@2x.png"),
         url("@img/travel/globe-back-mobile.jpg");
     }
+
+    @media (min-width: $tableW) {
+      top: 250px;
+      height: 451px;
+      background-image: url("@img/travel/traveller-illustration-tablet1.png"), url("@img/travel/globe-back-desk.jpg");
+      background-size: 372px 451px, cover;
+      background-position: 72% bottom, 0 0;
+    }
+
+    @media (min-resolution: 2dppx) and (min-width: $tableW) {
+      background-image: url("@img/travel/traveller-illustration-tablet1@2x.png"), url("@img/travel/globe-back-desk.jpg");
+    }
+
+    @media (min-width: $desktopW) {
+      height: 100%;
+      min-height: 640px;
+      top: 0;
+      background-image: url("@img/travel/traveller-illustration-desktop.png"), url("@img/travel/globe-back-desktop.png");
+      background-size: 431px 640px, 1440px 750px;
+      background-position: 60% top, left -150px;
+    }
+  }
+}
+
+.preview__container {
+  @media (min-width: $desktopW) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -25,14 +58,30 @@
   text-align: center;
   margin: 0;
   margin-bottom: 245px;
-  font-size: 36px;
-  line-height: calc(40 / 36);
+  font-size: calcFluidFontSize(36,60,320,768);
+  line-height: calc(40/36);
   font-weight: 700;
+
+  @media (min-width: $tableW) {
+    font-size: 60px;
+    line-height: calc(70/60);
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: $desktopW) {
+    text-align: left;
+    padding-top: 53px;
+    padding-left: 70px;
+  }
 }
 .preview__top-wrapper {
   display: flex;
   align-items: center;
   margin-bottom: 28px;
+
+  @media (min-width: $tableW) {
+    display: none;
+  }
 }
 .preview__contacts {
   display: flex;
@@ -95,25 +144,62 @@
   margin: 0;
   width: 186px;
   margin-bottom: 29px;
+
+  @media (min-width: $tableW) {
+    width: 295px;
+    padding-left: 32px;
+    margin-bottom: 213px;
+  }
+
+  @media (min-width: $desktopW) {
+    padding-top: 62px;
+    padding-right: 30px;
+    padding-left: 0;
+    margin-left: auto;
+    margin-bottom: 115px
+  }
 }
 
 .quote__item {
   margin: 0;
 
+  @media (min-width: $tableW) {
+    font-size: 28px;
+    line-height: calc(33/28);
+  }
+
   &:not(:last-child) {
     margin-bottom: 18px;
+
+    @media (min-width: $tableW) {
+      margin-bottom: 45px;
+    }
   }
 }
 
 b.quote__item  {
   font-weight: 700;
+  
+  @media (min-width: $tableW) {
+    font-size: 21px;
+    line-height: calc(25/21);
+  }
 }
 
 .preview__list {
   display: grid;
   grid-template-columns: 1fr;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
+
+  @media (min-width: $tableW) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktopW) {
+    grid-column: 1 / 3;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .preview__item {
   font-size: 18px;
@@ -123,6 +209,15 @@ b.quote__item  {
   font-weight: 700;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tableW) {
+    padding: 30px 33px 24px 33px;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktopW) {
+    padding: 30px 30px 30px 35px;
+  }
 
   &:nth-child(1) {
     background-color: $special_orange;
@@ -140,9 +235,29 @@ b.quote__item  {
   span {
     &:first-child {
       flex: 0 0 140px;
+
+      @media (min-width: $tableW) {
+        flex: 0 0 210px;
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      @media (min-width: $desktopW) {
+        margin: 0;
+      }
     }
     &:last-child {
       color: #ffffff;
+
+      @media (min-width: $tableW) {
+        flex: 1 1 100%;
+        font-size: 30px;
+      }
+
+      @media (min-width: $desktopW) {
+        flex: 0 0 auto;
+        font-size: 24px;
+      }
     }
   }
 }
