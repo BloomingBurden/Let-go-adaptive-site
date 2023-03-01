@@ -96,9 +96,61 @@ button {
 
 .title {
   color: $special_orange;
-  font-size: 24px;
+  font-size: calcFluidFontSize(24, 45, 320, 768);
   line-height: 1;
   font-weight: 700;
+
+  @media (min-width: $tableW) {
+    font-size: 45px;
+  }
+}
+
+.button {
+  display: block;
+  position: relative;
+  padding: 20px 22px;
+  width: 100%;
+  
+  font-weight: 700;
+  color: $basic_blue_light;
+  font-size: calcFluidFontSize(18, 24, 320, 768);
+  line-height: 1;
+  background-color: $basic_yellow;
+  border-radius: 10px;
+  transition: 0.3s ease;
+
+  @media (min-width: $tableW) {
+    font-size: 24px;
+    border-radius: 20px;
+    padding: 28px 33px;
+  }
+
+  @media (min-width: $desktopW) {
+    width: 280px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: 7px solid transparent;
+    border-left: 10px solid $basic_blue_light;
+
+    @media (min-width: $tableW) {
+      right: 30px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $special_orange;
+  }
+
+  &:active {
+    color: rgba($basic_blue_light, 0.3);
+  }
 }
 
 .page-body main {

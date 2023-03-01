@@ -556,9 +556,46 @@ button {
 
 .title {
   color: #FF8D30;
-  font-size: 24px;
+  font-size: calc( 0.046875 * 100vw + 9px );
   line-height: 1;
   font-weight: 700;
+}
+
+.button {
+  display: block;
+  position: relative;
+  padding: 20px 22px;
+  width: 100%;
+  font-weight: 700;
+  color: #1D2E5B;
+  font-size: calc( 0.0133928571 * 100vw + 13.7142857143px );
+  line-height: 1;
+  background-color: #FFD74B;
+  border-radius: 10px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: 7px solid transparent;
+  border-left: 10px solid #1D2E5B;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #FF8D30;
+}
+
+.button:active {
+  color: rgba(29, 46, 91, 0.3);
 }
 
 .page-body main {
@@ -815,6 +852,7 @@ button {
 .preview {
   position: relative;
   overflow: hidden;
+  padding-bottom: 39px;
 }
 
 .no-webp .preview::before {
@@ -985,9 +1023,43 @@ b.quote__item {
   color: #ffffff;
 }
 
+.no-webp .about {
+  background-image: url("../img/about/about-mobile.png"); }
+
+.about {
+  padding: 30px 36px 82px 24px;
+  background-repeat: no-repeat;
+  background-position: center 5px;
+  background-size: 292px 353px;
+  background-color: #192144;
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.about__descr {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: calc( 0.0267857143 * 100vw + 7.4285714286px );
+}
+
+.about__descr--bold {
+  font-weight: 700;
+  margin: 0;
+}
+
+.about__detail {
+  display: none;
+}
+
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px), (min-resolution: 2dppx) and (min-width: 320px) {
   .no-webp .preview::before {
     background-image: url("../img/travel/traveller-illustration-mobile@2x.png"), url("../img/travel/globe-back-mobile.jpg"); }
+
+  .no-webp .about {
+    background-image: url("../img/about/about-mobile@2x.png"); }
 }
 
 @media (min-width: 768px) {
@@ -997,6 +1069,20 @@ b.quote__item {
 
   .container {
     padding: 0 40px;
+  }
+
+  .title {
+    font-size: 45px;
+  }
+
+  .button {
+    font-size: 24px;
+    border-radius: 20px;
+    padding: 28px 33px;
+  }
+
+  .button::after {
+    right: 30px;
   }
 
   .page-body main {
@@ -1118,6 +1204,10 @@ b.quote__item {
     height: 24px;
   }
 
+  .preview {
+    padding-bottom: 96px;
+  }
+
   .no-webp .preview::before {
     background-image: url("../img/travel/traveller-illustration-tablet1.png"), url("../img/travel/globe-back-desk.jpg"); }
 
@@ -1131,7 +1221,7 @@ b.quote__item {
   .preview__title {
     font-size: 60px;
     line-height: 1.1666666667;
-    margin-bottom: 62px;
+    margin-bottom: 90px;
   }
 
   .preview__top-wrapper {
@@ -1139,7 +1229,7 @@ b.quote__item {
   }
 
   .preview__quote {
-    width: 295px;
+    width: 42.87%;
     padding-left: 32px;
     margin-bottom: 213px;
   }
@@ -1183,11 +1273,48 @@ b.quote__item {
             flex: 1 1 100%;
     font-size: 30px;
   }
+
+  .no-webp .about {
+    background-image: url("../img/about/img-tablet.png"); }
+
+  .about {
+    padding: 40px 36px 89px 37px;
+    background-size: 720px 596px;
+    background-position: right top;
+  }
+
+  .about__wrapper {
+    width: 50%;
+  }
+
+  .about__title {
+    margin-bottom: 40px;
+  }
+
+  .about__descr {
+    font-size: 28px;
+    line-height: 1.1785714286;
+    margin-bottom: 30px;
+  }
+
+  .about__descr--bold {
+    margin-bottom: 51px;
+    font-size: 21px;
+    line-height: 1.1904761905;
+  }
+
+  .about__detail {
+    display: block;
+    width: 89.61%;
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
   .no-webp .preview::before {
     background-image: url("../img/travel/traveller-illustration-tablet1@2x.png"), url("../img/travel/globe-back-desk.jpg"); }
+
+  .no-webp .about {
+    background-image: url("../img/about/img-tablet@2x.png"); }
 }
 
 @media (min-width: 1440px) {
@@ -1197,6 +1324,10 @@ b.quote__item {
 
   .container {
     padding: 0 58px;
+  }
+
+  .button {
+    width: 280px;
   }
 
   .header--scrolled .nav-header__item {
@@ -1381,6 +1512,7 @@ b.quote__item {
   }
 
   .preview__quote {
+    width: 45%;
     padding-top: 62px;
     padding-right: 30px;
     padding-left: 0;
@@ -1410,11 +1542,37 @@ b.quote__item {
             flex: 0 0 auto;
     font-size: 24px;
   }
+
+  .about {
+    background-position: 93% bottom;
+    padding: 132px 36px 163px 73px;
+    background-size: 630px 665px;
+    background-color: #161C35;
+  }
+
+  .about__wrapper {
+    width: 51%;
+  }
+
+  .about__title {
+    margin-bottom: 56px;
+  }
+
+  .about__descr {
+    margin-bottom: 40px;
+  }
+
+  .about__descr--bold {
+    margin-bottom: 85px;
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1440px), (min-resolution: 2dppx) and (min-width: 1440px) {
   .no-webp .preview::before {
     background-image: url("../img/travel/traveller-illustration-desktop@2x.png"), url("../img/travel/globe-back-desktop.png"); }
+
+  .no-webp .about {
+    background-image: url("../img/about/img_back@2x.png"); }
 }
 
 @media (max-width: 1439px) {
@@ -1552,9 +1710,16 @@ b.quote__item {
 
 .webp .preview::before { background-image: url(../img/travel/traveller-illustration-mobile.webp), url(../img/travel/globe-back-mobile.webp); }
 
+.webp .about { background-image: url(../img/about/about-mobile.webp); }
+
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px), (min-resolution: 2dppx) and (min-width: 320px) {
 
   .webp .preview::before { background-image: url(../img/travel/traveller-illustration-mobile@2x.webp), url(../img/travel/globe-back-mobile.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px), (min-resolution: 2dppx) and (min-width: 320px) {
+
+  .webp .about { background-image: url(../img/about/about-mobile@2x.webp); }
 }
 
 @media (min-width: 768px) {
@@ -1562,9 +1727,19 @@ b.quote__item {
   .webp .preview::before { background-image: url(../img/travel/traveller-illustration-tablet1.webp), url(../img/travel/globe-back-desk.webp); }
 }
 
+@media (min-width: 768px) {
+
+  .webp .about { background-image: url(../img/about/img-tablet.webp); }
+}
+
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
 
   .webp .preview::before { background-image: url(../img/travel/traveller-illustration-tablet1@2x.webp), url(../img/travel/globe-back-desk.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
+
+  .webp .about { background-image: url(../img/about/img-tablet@2x.webp); }
 }
 
 @media (min-width: 1440px) {
@@ -1575,4 +1750,9 @@ b.quote__item {
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1440px), (min-resolution: 2dppx) and (min-width: 1440px) {
 
   .webp .preview::before { background-image: url(../img/travel/traveller-illustration-desktop@2x.webp), url(../img/travel/globe-back-desktop.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1440px), (min-resolution: 2dppx) and (min-width: 1440px) {
+
+  .webp .about { background-image: url(../img/about/img_back@2x.webp); }
 }
