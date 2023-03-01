@@ -20,6 +20,23 @@
   background-color: #ffffff;
   justify-content: center;
   padding: 0;
+
+  .burger {
+    &::after,
+    &::before {
+      background-color: #cccccc;
+    }
+  }
+
+  .nav-header::before {
+    background-color: $dark-blue;
+  }
+
+  .nav-header__item {
+    @media (min-width: $desktopW) {
+      color: $dark-blue;
+    }
+  }
 }
 
 .header[data-burger='opened'] {

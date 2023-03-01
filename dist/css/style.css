@@ -590,6 +590,15 @@ button {
   padding: 0;
 }
 
+.header--scrolled .burger::after,
+.header--scrolled .burger::before {
+  background-color: #cccccc;
+}
+
+.header--scrolled .nav-header::before {
+  background-color: #192144;
+}
+
 .header[data-burger=opened] .header__body {
   opacity: 1;
   visibility: visible;
@@ -1190,6 +1199,10 @@ b.quote__item {
     padding: 0 58px;
   }
 
+  .header--scrolled .nav-header__item {
+    color: #192144;
+  }
+
   .header__logo {
     margin-right: 40px;
   }
@@ -1399,6 +1412,11 @@ b.quote__item {
   }
 }
 
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1440px), (min-resolution: 2dppx) and (min-width: 1440px) {
+  .no-webp .preview::before {
+    background-image: url("../img/travel/traveller-illustration-desktop@2x.png"), url("../img/travel/globe-back-desktop.png"); }
+}
+
 @media (max-width: 1439px) {
   .header__body {
     z-index: 4;
@@ -1552,4 +1570,9 @@ b.quote__item {
 @media (min-width: 1440px) {
 
   .webp .preview::before { background-image: url(../img/travel/traveller-illustration-desktop.webp), url(../img/travel/globe-back-desktop.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1440px), (min-resolution: 2dppx) and (min-width: 1440px) {
+
+  .webp .preview::before { background-image: url(../img/travel/traveller-illustration-desktop@2x.webp), url(../img/travel/globe-back-desktop.webp); }
 }

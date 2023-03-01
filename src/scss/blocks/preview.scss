@@ -44,6 +44,9 @@
       background-size: 431px 640px, 1440px 750px;
       background-position: 60% top, left -150px;
     }
+    @media (min-resolution: 2dppx) and (min-width: $desktopW) {
+      background-image: url("@img/travel/traveller-illustration-desktop@2x.png"), url("@img/travel/globe-back-desktop.png");
+    }
   }
 }
 
