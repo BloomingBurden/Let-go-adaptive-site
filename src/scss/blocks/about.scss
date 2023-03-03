@@ -1,17 +1,24 @@
 .about {
-  padding: 30px 36px 82px 24px;
+  padding: 30px 36px 83px 24px;
+  position: relative;
+  z-index: 1;
   
   background-image: url('@img/about/about-mobile.png');
   background-repeat: no-repeat;
   background-position: center 5px;
   background-size: 292px 353px;
   background-color: $dark-blue;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  overflow: hidden;
 
   @media (min-width: $tableW) {
     padding: 40px 36px 89px 37px;
     background-image: url('@img/about/img-tablet.png');
     background-size: 720px 596px;
     background-position: right top;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
   }
 
   @media (min-width: $desktopW) {
@@ -19,6 +26,7 @@
     padding: 132px 36px 163px 73px;
     background-size: 630px 665px;
     background-color: $accent;
+    background-image: url('@img/about/img_back.png');
   }
 
   @media (min-resolution: 2dppx) and (min-width: $mobileW) {

@@ -1,0 +1,91 @@
+.directions {
+  background-color: #EDEFF6;
+  color: $special_grey;
+  padding: 100px 0 34px;
+  margin-top: -30px;
+
+  @media (min-width: $desktopW) {
+    padding: 190px 0 138px;
+  }
+}
+
+.directions__wrapper {
+  @media (min-width: $tableW) {
+    padding: 0 35px;
+    background-image: url('@img/flags/flags-back.png');
+    background-repeat: no-repeat;
+    background-position: right 5px;
+  }
+
+  @media (min-width: $desktopW) {
+    padding: 0 70px;
+    display: grid;
+    align-items: start;
+    grid-column-gap: 170px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'a b'
+    'a b'
+    'a c';
+  }
+}
+
+.directions__wrap-text {
+  margin-bottom: 62px;
+
+  @media (min-width: $tableW) {
+    margin-bottom: 105px;
+  }
+  @media (min-width: $desktopW) {
+    grid-area: b;
+    margin-bottom: 96px;
+  }
+}
+
+.directions__title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0 25px;
+
+  @media (min-width: $tableW) {
+    margin-bottom: 60px;
+    padding: 0;
+  }
+}
+
+.directions__text {
+  margin: 0;
+  padding: 0 25px;
+  width: 95%;
+  font-size: calcFluidFontSize(16, 28, 320, 768);
+
+  @media (min-width: $tableW) {
+    padding: 0;
+    width: 60.84%;
+
+    font-size: 28px;
+    line-height: calc(33/28);
+  }
+
+  @media (min-width: $desktopW) {
+    width: 378px;
+  }
+}
+.directions__list {
+  margin-bottom: 10px;
+
+  @media (min-width: $tableW) {
+    margin-bottom: 27px;
+  }
+
+  @media (min-width: $desktopW) {
+    grid-area: a;
+    margin-bottom: 0;
+  }
+}
+
+.directions__button {
+  @media (min-width: $desktopW) {
+    grid-area: c;
+  }
+}
