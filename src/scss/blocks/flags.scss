@@ -1,0 +1,15 @@
+.flags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.flags__item {
+  flex: 0 0 35px;
+  height: 25px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

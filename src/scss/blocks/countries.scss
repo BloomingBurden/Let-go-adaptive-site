@@ -51,6 +51,7 @@
   height: 110px;
 
   @media (min-width: $tableW) {
+    flex-shrink: 0;
     width: 192px;
     height: 100%;
     order: 1;

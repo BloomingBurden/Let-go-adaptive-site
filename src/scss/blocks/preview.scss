@@ -219,6 +219,7 @@ b.quote__item  {
   font-weight: 700;
   display: flex;
   justify-content: space-between;
+  background-color: $basic_yellow;
 
   @media (min-width: $tableW) {
     padding: 30px 33px 24px 33px;

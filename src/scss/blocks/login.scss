@@ -23,6 +23,7 @@
   }
 
   @media (min-width: $desktopW) {
+    flex-shrink: 0;
     order: 1;
     margin: 0;
   }
