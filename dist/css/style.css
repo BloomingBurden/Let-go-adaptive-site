@@ -1154,6 +1154,7 @@ b.quote__item {
   left: 25px;
   width: 35px;
   height: 24px;
+  z-index: 2;
 }
 
 .countries__title {
@@ -1270,17 +1271,6 @@ b.quote__item {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.people__level::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 99%;
-  height: 60px;
-  border: 4px solid #FF8D30;
-  border-radius: 50%;
-}
-
 .people__level b {
   padding: 0 5px;
   font-size: 24px;
@@ -1296,6 +1286,33 @@ b.quote__item {
   font-size: 14px;
   line-height: 1;
   font-weight: 400;
+}
+
+.people__level svg {
+  width: 63px;
+  height: 63px;
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  margin: 0;
+}
+
+.people__circle-main {
+  filL: none;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.people__circle-main {
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+  stroke: #fc9135;
 }
 
 .people__img {
