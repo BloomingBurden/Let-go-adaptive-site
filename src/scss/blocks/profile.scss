@@ -1,0 +1,230 @@
+.profile {
+  padding: 53px 0 38px;
+  background-color: #e6e8f1;
+
+  @media (min-width: $tableW) {
+    padding: 70px 0 63px;
+  }
+
+  @media (min-width: $desktopW) {
+    padding: 100px 0 165px;
+  }
+}
+
+.profile__wrapper {
+  padding-left: 25px;
+  position: relative;
+
+  @media (min-width: $tableW) {
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktopW) {
+    padding: 0 72px;
+  }
+}
+
+.profile__title {
+  margin: 0;
+  margin-bottom: 45px;
+  width: 43.6%;
+
+  @media (min-width: $tableW) {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktopW) {
+    margin-bottom: 131px;
+  }
+}
+
+.profile__list {
+  margin-bottom: 26px;
+  position: relative;
+  
+  @media (min-width: $tableW) {
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: $desktopW) {
+    width: 904px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    right: 0;
+    top: -130px;
+    background-image: url("@img/profile/rates.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $tableW) {
+      bottom: -120px;
+      top: auto;
+      right: 45px;
+    }
+    @media (min-width: $desktopW) {
+      top: 50%;
+      right: -270px;
+      width: 198px;
+      height: 198px;
+      background-image: url("@img/profile/rates-big.png");
+      transform: translateY(-50%);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: -40px;
+    right: 0;
+    width: 198px;
+    min-height: 285px;
+    height: 100%;
+
+    background-color: #e2e5f2;
+    border-radius: 20px;
+    display: none;
+
+    @media (min-width: $tableW) {
+      height: calc(100% + 80px);
+      display: block;
+    }
+
+    @media (min-width: $desktopW) {
+      top: -50px;
+      height: calc(100% + 100px);
+      width: 446px;
+      min-height: 300px;
+      right: -162px;
+    }
+  }
+}
+
+.profile__item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $special_grey;
+  line-height: 1;
+
+  &:nth-child(2) {
+    .profile__number {
+      background-color: $special_yellow_dark;
+    }
+  }
+  &:nth-child(3) {
+    .profile__number {
+      background-color: $basic_yellow;
+    }
+  }
+}
+
+.profile__header {
+  flex: 1 1 auto;
+  padding: 11px 15px 15px 0;
+  border-top: 1px solid #e1e3e9;
+  border-bottom: 1px solid #e1e3e9;
+
+  @media (min-width: $tableW) {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0 13px 22px;
+  }
+}
+
+.profile__text {
+  font-size: calcFluidFontSize(16, 28, 320, 768);
+  margin: 0;
+  margin-bottom: 7px;
+
+  @media (min-width: $tableW) {
+    flex: 1 1 auto;
+    padding-right: 15px;
+    font-size: 28px;
+    margin: 0;
+  }
+}
+.profile__price {
+  font-size: calcFluidFontSize(16, 28, 320, 768);
+
+  @media (min-width: $tableW) {
+    flex: 0 0 198px;
+    text-align: center;
+    font-size: 28px;
+  }
+
+  @media (min-width: $desktopW) {
+    flex: 0 0 285px;
+    text-align: right;
+  }
+}
+.profile__number {
+  position: relative;
+  margin-top: 3px;
+  align-self: flex-start;
+  flex: 0 0 13.8%;
+  padding-top: 13.8%;
+
+  font-size: calcFluidFontSize(16, 28, 320, 768);
+  background-color: $special_orange;
+  color: #ffffff;
+  border-radius: 50%;
+
+  span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (min-width: $tableW) {
+    margin-top: 0;
+    align-self: center;
+    order: -1;
+    flex: 0 0 68px;
+    height: 68px;
+    padding-top: 0;
+    font-size: 28px;
+  }
+}
+.profile__show {
+  color: #132576;
+  font-weight: 700;
+  font-size: calcFluidFontSize(16, 20, 320, 768);
+  line-height: 1;
+
+  @media (min-width: $tableW) {
+    display: block;
+    padding: 20px 0;
+    padding-left: 90px;
+    position: relative;
+    font-size: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 68px;
+      height: 68px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      border-radius: 50%;
+      background-image: url("@img/icons/icons.svg#icon_businessman");
+      background-color: #E2E5F2;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 27px 27px;
+    }
+  }
+}

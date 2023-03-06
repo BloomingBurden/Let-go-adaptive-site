@@ -22,6 +22,7 @@
   overflow: hidden;
   border-radius: 20px;
   margin-bottom: 10px;
+  transition: 0.3s ease;
 
   @media (min-width: $tableW) {
     margin-right: 48px;
@@ -46,6 +47,11 @@
     @media (min-width: $tableW) {
       margin-right: 0;
     }
+  }
+
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
   }
 }
 .people__level {
@@ -99,8 +105,8 @@
 }
 
 .people__circle-main {
-  stroke-dasharray: 180;
-  stroke-dashoffset: 180;
+  stroke-dasharray: 176px;
+  stroke-dashoffset: 176px;
   stroke: #fc9135;
 }
 
