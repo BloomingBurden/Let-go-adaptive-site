@@ -1120,10 +1120,19 @@ b.quote__item {
           flex: 0 0 100%;
   max-width: 300px;
   margin-bottom: 8px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .countries__item:last-child {
   margin-bottom: 0;
+}
+
+.countries__item:hover,
+.countries__item:focus {
+  -webkit-filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
+          filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
 }
 
 .countries__img {
@@ -1191,8 +1200,12 @@ b.quote__item {
 
 .companion {
   padding: 67px 0 31px;
+  position: relative;
+  z-index: 1;
   background-repeat: no-repeat;
   background-position: center 40px;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24);
 }
 
 .companion__header {
@@ -1243,10 +1256,19 @@ b.quote__item {
   overflow: hidden;
   border-radius: 20px;
   margin-bottom: 10px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .people__item:last-child {
   margin-bottom: 0;
+}
+
+.people__item:hover,
+.people__item:focus {
+  -webkit-filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
+          filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
 }
 
 .people__level {
@@ -1310,8 +1332,8 @@ b.quote__item {
 }
 
 .people__circle-main {
-  stroke-dasharray: 180;
-  stroke-dashoffset: 180;
+  stroke-dasharray: 176px;
+  stroke-dashoffset: 176px;
   stroke: #fc9135;
 }
 
@@ -1410,6 +1432,130 @@ b.quote__item {
 
 .flags__item:last-child {
   margin-right: 0;
+}
+
+.profile {
+  padding: 53px 0 38px;
+  background-color: #e6e8f1;
+}
+
+.profile__wrapper {
+  padding-left: 25px;
+  position: relative;
+}
+
+.profile__title {
+  margin: 0;
+  margin-bottom: 45px;
+  width: 43.6%;
+}
+
+.profile__list {
+  margin-bottom: 26px;
+  position: relative;
+}
+
+.no-webp .profile__list::before {
+  background-image: url("../img/profile/rates.png"); }
+
+.profile__list::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  right: 0;
+  top: -130px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profile__list::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: -40px;
+  right: 0;
+  width: 198px;
+  min-height: 285px;
+  height: 100%;
+  background-color: #e2e5f2;
+  border-radius: 20px;
+  display: none;
+}
+
+.profile__item {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #444444;
+  line-height: 1;
+}
+
+.profile__item:nth-child(2) .profile__number {
+  background-color: #FFBD30;
+}
+
+.profile__item:nth-child(3) .profile__number {
+  background-color: #FFD74B;
+}
+
+.profile__header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 11px 15px 15px 0;
+  border-top: 1px solid #e1e3e9;
+  border-bottom: 1px solid #e1e3e9;
+}
+
+.profile__text {
+  font-size: calc( 0.0267857143 * 100vw + 7.4285714286px );
+  margin: 0;
+  margin-bottom: 7px;
+}
+
+.profile__price {
+  font-size: calc( 0.0267857143 * 100vw + 7.4285714286px );
+}
+
+.profile__number {
+  position: relative;
+  margin-top: 3px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 13.8%;
+          flex: 0 0 13.8%;
+  padding-top: 13.8%;
+  font-size: calc( 0.0267857143 * 100vw + 7.4285714286px );
+  background-color: #FF8D30;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.profile__number span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.profile__show {
+  color: #132576;
+  font-weight: 700;
+  font-size: calc( 0.0089285714 * 100vw + 13.1428571429px );
+  line-height: 1;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px), (min-resolution: 2dppx) and (min-width: 320px) {
@@ -1834,6 +1980,104 @@ b.quote__item {
     font-size: 20px;
     line-height: 1.15;
   }
+
+  .profile {
+    padding: 70px 0 63px;
+  }
+
+  .profile__wrapper {
+    padding-left: 0;
+  }
+
+  .profile__title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  .profile__list {
+    margin-bottom: 33px;
+  }
+
+  .profile__list::before {
+    bottom: -120px;
+    top: auto;
+    right: 45px;
+  }
+
+  .profile__list::after {
+    height: calc(100% + 80px);
+    display: block;
+  }
+
+  .profile__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 14px 0 13px 22px;
+  }
+
+  .profile__text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    padding-right: 15px;
+    font-size: 28px;
+    margin: 0;
+  }
+
+  .profile__price {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 198px;
+            flex: 0 0 198px;
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .profile__number {
+    margin-top: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 68px;
+            flex: 0 0 68px;
+    height: 68px;
+    padding-top: 0;
+    font-size: 28px;
+  }
+
+  .profile__show {
+    display: block;
+    padding: 20px 0;
+    padding-left: 90px;
+    position: relative;
+    font-size: 20px;
+  }
+
+  .profile__show::before {
+    content: "";
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    border-radius: 50%;
+    background-image: url("../img/icons/icons.svg#icon_businessman");
+    background-color: #E2E5F2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 27px 27px;
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
@@ -2214,6 +2458,50 @@ b.quote__item {
   .people__item:nth-child(2n) {
     margin-right: 0;
   }
+
+  .profile {
+    padding: 100px 0 165px;
+  }
+
+  .profile__wrapper {
+    padding: 0 72px;
+  }
+
+  .profile__title {
+    margin-bottom: 131px;
+  }
+
+  .profile__list {
+    width: 904px;
+  }
+
+  .no-webp .profile__list::before {
+    background-image: url("../img/profile/rates-big.png"); }
+
+  .profile__list::before {
+    top: 50%;
+    right: -270px;
+    width: 198px;
+    height: 198px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+
+  .profile__list::after {
+    top: -50px;
+    height: calc(100% + 100px);
+    width: 446px;
+    min-height: 300px;
+    right: -162px;
+  }
+
+  .profile__price {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 285px;
+            flex: 0 0 285px;
+    text-align: right;
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1440px), (min-resolution: 2dppx) and (min-width: 1440px) {
@@ -2546,6 +2834,8 @@ b.quote__item {
 
 .webp .companion { background-image: url(../img/fellow/back.webp); }
 
+.webp .profile__list::before { background-image: url(../img/profile/rates.webp); }
+
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px), (min-resolution: 2dppx) and (min-width: 320px) {
 
   .webp .preview::before { background-image: url(../img/travel/traveller-illustration-mobile@2x.webp), url(../img/travel/globe-back-mobile.webp); }
@@ -2599,6 +2889,11 @@ b.quote__item {
 @media (min-width: 1440px) {
 
   .webp .countries__item:last-child::after { background-image: url(../img/flags/fade.webp); }
+}
+
+@media (min-width: 1440px) {
+
+  .webp .profile__list::before { background-image: url(../img/profile/rates-big.webp); }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1440px), (min-resolution: 2dppx) and (min-width: 1440px) {

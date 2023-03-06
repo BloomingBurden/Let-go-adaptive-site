@@ -1,9 +1,12 @@
 .companion {
   padding: 67px 0 31px;
+  position: relative;
+  z-index: 1;
   
   background-image: url('@img/fellow/back.png');
   background-repeat: no-repeat;
   background-position: center 40px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.24);
 
   @media (min-width: $tableW) {
     padding: 141px 0 87px;
