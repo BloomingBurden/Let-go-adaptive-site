@@ -1677,6 +1677,52 @@ b.quote__item {
   color: #FFD74B;
 }
 
+.address {
+  padding: 34px 0;
+  background-color: #FFD74B;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24);
+}
+
+.address__body {
+  padding-left: 61px;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.address__info {
+  margin: 0;
+  font-size: calc( 0.0267857143 * 100vw + 7.4285714286px );
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1D2E5B;
+}
+
+.address__info::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #121936;
+  background-image: url("../img/icons/icons.svg#icon_location");
+  background-size: 21px 21px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.address__button {
+  border: 3px solid #161C35;
+}
+
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px), (min-resolution: 2dppx) and (min-width: 320px) {
   .no-webp .preview::before {
     background-image: url("../img/travel/traveller-illustration-mobile@2x.png"), url("../img/travel/globe-back-mobile.jpg"); }
@@ -2281,6 +2327,32 @@ b.quote__item {
   .authorization .contacts__icon {
     background-color: #121936;
   }
+
+  .address {
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 70px 0 84px;
+  }
+
+  .address__body {
+    padding-left: 94px;
+    margin-bottom: 62px;
+  }
+
+  .address__info {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .address__info br {
+    display: none;
+  }
+
+  .address__info::before {
+    height: 68px;
+    width: 68px;
+    background-size: 32px 32px;
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
@@ -2756,6 +2828,36 @@ b.quote__item {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+
+  .address {
+    padding: 55px 0;
+  }
+
+  .address__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 75px 0 152px;
+  }
+
+  .address__body {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 692px;
+            flex: 1 1 692px;
+    margin-bottom: 0;
+  }
+
+  .address__button {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 324px;
+            flex: 0 0 324px;
   }
 }
 
