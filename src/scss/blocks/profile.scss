@@ -1,9 +1,14 @@
 .profile {
   padding: 53px 0 38px;
   background-color: #e6e8f1;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.24);
 
   @media (min-width: $tableW) {
     padding: 70px 0 63px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
   }
 
   @media (min-width: $desktopW) {
@@ -226,5 +231,10 @@
       background-position: center;
       background-size: 27px 27px;
     }
+  }
+
+  &:hover,
+  &:focus {
+    color: $special_orange;
   }
 }
