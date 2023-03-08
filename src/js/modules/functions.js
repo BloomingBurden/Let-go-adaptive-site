@@ -13,14 +13,19 @@ function isWebp() {
     });
 }
 
-const onClickBurger = (evt) => {
-    const target = evt.target;
+const onClickBurger = () => {
+    const header = document.querySelector('.header');
 
-    if (!target.closest('.burger')) return;
+    header.addEventListener('click', (evt) => {
+        const target = evt.target;
+        const burgerMenu = document.querySelector('[data-burger]');
 
-    const burgerMenu = document.querySelector('[data-burger]');
-
-    burgerMenu.dataset.burger === 'opened' ? burgerMenu.dataset.burger = 'closed' : burgerMenu.dataset.burger = 'opened';
+        if (!target.closest('.burger') && burgerMenu.dataset.burger === 'closed') return;
+    
+        if (target.closest('.burger') || target.tagName === 'A') {
+            burgerMenu.dataset.burger === 'opened' ? burgerMenu.dataset.burger = 'closed' : burgerMenu.dataset.burger = 'opened';
+        }
+    })
 };
 
 const setPeopleLevel = () => {
@@ -36,4 +41,4 @@ const setPeopleLevel = () => {
 
 isWebp();
 setPeopleLevel();
-document.addEventListener('click', onClickBurger);
+onClickBurger();
