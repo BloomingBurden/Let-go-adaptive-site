@@ -13,4 +13,6 @@
   - Svg sprites
 4. Grid
 
-![This is an image](https://i.ibb.co/LCh6xmV/1.png)
+![This is an image mobile](https://i.ibb.co/tmq4tLy/Index-Mobile.png)
+![This is an image table](https://i.ibb.co/LCh6xmV/1.png)
+![This is an image desktop](https://i.ibb.co/ZLN4bMq/Index-Desktop.png)
