@@ -8,7 +8,7 @@
   <link rel="icon" href="images/favicon.png">
   <meta property="og:image" content="images/dist/preview.jpg">
   <title>Шаблон</title>
-
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -401,8 +401,43 @@
         </div>
       </div>
     </section>
+    <div id="map"></div>
   </main>
 
+  <footer class="footer">
+    <div class="footer__container container">
+      <h2 class="visually-hidden">Погнали?</h2>
+      <a href="" class="footer__img">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-black.png">
+          <img src="img/logo-black.png" alt="Логотип" width="96" height="15">
+        </picture>
+      </a>
+      <ul class="footer__social social">
+        <li class="social__item social__item--fb">
+          <a href="" class="social__link">
+            <svg class="social__icon" width="11" height="21">
+              <use xlink:href="img/icons/icons.svg#icon_facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item social__item--vk">
+          <a href="" class="social__link">
+            <svg class="social__icon" width="23" height="12">
+              <use xlink:href="img/icons/icons.svg#icon_vkontakte"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item social__item--inst">
+          <a href="" class="social__link">
+            <svg class="social__icon" width="18" height="18">
+              <use xlink:href="img/icons/icons.svg#icon_instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
   <script src="js/app.min.js"></script>
 </body>
 

@@ -1,4 +1,7 @@
 .address {
+  position: relative;
+  z-index: 1;
+  
   padding: 34px 0;
   background-color: $basic_yellow;
   border-bottom-left-radius: 30px;
